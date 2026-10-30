@@ -110,7 +110,3 @@ Additional verified checks:
 These checks were executed successfully during the audit. The UI tests use a small DOM and Chart.js stub: they verify the application's handlers and datasets, not real browser drawing, layout, console output, or heap garbage collection. Responsive CSS has shrinking grid children and breakpoints at 1100, 800, and 520 pixels; this alone is not a passed visual test.
 
 Browser audit status: Chrome's initial window was inspected, but Computer Use stopped when opening a separate audit tab because it could not determine the current browser URL confidently enough to enforce its policy. No simulator screenshot, laptop/desktop viewport check, real Chart.js rendering check, browser-console inspection, or heap profile was completed. Those items are **unverified**, not passed. Automated JavaScript syntax, algorithm, control-handler, chart-dataset, bounded-event-buffer, and single-pending-callback checks passed as described above.
-
-## Viva explanation
-
-One clock creates identical packets for two traffic shapers. Leaky Bucket sends at fixed slots. Token Bucket saves limited credit and can send a burst. Both use real FIFO queues when queueing is allowed. Every packet records its arrival and final transmission or drop time. Counters, waiting time, and throughput follow directly from those events. The interface only displays those calculations.
